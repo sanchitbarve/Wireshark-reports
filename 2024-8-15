@@ -1,0 +1,63 @@
+# Incident Report for PCAP 2024-08-15 WARMCOOKIE:
+
+Incident report: A Windows host was infected, and it seems to be from [**WarmCookie**](https://malpedia.caad.fkie.fraunhofer.de/details/win.warmcookie) malware.
+
+Date: 8th of August 2024
+
+Analyst name: Sanchit S Barve
+
+Department: Security Operations Center (SOC)
+
+Classification: Malware Infection
+Severity: High
+
+**Executive Summary:**
+
+on 8th of August 2024 the security operations center identified a malicious alert , That a malware has entered  the internal system in the Active Directory Environment LAFONTAINBLEU the victim downloaded a Zip file which upon extraction activated a binary file with a payload. the zip file downloaded over HTTP protocol , on a site impersonating fedex site which was actually a malware related to the warmcookie malware family  
+
+Post infection: infected IP sends GET requests to via command and control (c2) over the ip 72.5.43.29 by sending lots of GET requests and also POST Requests payloads
+
+Victim details:
+
+victim ip :-10.8.15.133
+
+host pc:- DESKTOP-H8ALZBV
+
+UserName:-plucero
+
+Mac-Address:-00:1c:bf:03:54:82
+
+secondary payload retrieval:-
+
+ip.
+
+Timeline:-
+
+T0:-User Initates  the HTTP request to malicious URL
+
+T1: Malicious zip is downloaded with binary file payload
+
+T2:ZIP Archive is Extracted and Javascript file is revealed
+
+T3: Javascript file executes Malicious traffic over 72.5.43.29
+
+T4: SOC Analyzes PCAP and confirms Warm Cookie infection 
+
+**INITIAL INFECTION VECTOR:**
+
+Malicious-ip:-104.21.55.70
+
+domain: [quote.checkfedexexp.com](http://quote.checkfedexexp.com/)
+
+Protocol:HTTP
+
+request: GET/managements?…..
+
+Malicious-URL:- quote.checkfedexexp.com/managements?…
+
+SHA-HASH:-798563fcf7600f7ef1a35996291a9dfb5f9902733404dd499e2e736ea1dc6fc5
+Domain:- quote.checkfedexexp.com
+
+Tools used:- Wireshark- PCAP analysis, traffic correlation, file extraction
+
+Virustotal:- Malware Reputation and signature validation
