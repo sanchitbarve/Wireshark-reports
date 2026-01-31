@@ -1,0 +1,66 @@
+Incident Report For PCAP 2025-01-22 FAKE GOOGLE AUTHENTICATOR:
+
+incident report suggests that a windows pc was infected after downloading a suspicious software while searching for Google Authenticator
+
+Date: 22nd January 2025
+
+Analyst name: Sanchit S Barve
+
+Department: Security operation centre(SOC)
+
+classification:Malware infection
+
+severity:-high
+
+Exceutive summery
+
+On 22nd January 2025 the security operations center identified a malicious alert , That a malware has entered the internal system in the Active Directory Environment BLUEMOONTUESDAY the victim searched for Google Authenticator and downloaded a malicious software from a fake website impersonating Google Authenticator
+
+Post infection: infected IP sends GET requests to via command and control (c2) servers by sending multiple GET requests to different external IP addresses related to the malware infrastructure
+
+Victim details:
+
+victim ip :-10.1.17.215
+
+host pc:- DESKTOP-L8C5GSJ
+
+UserName:-shutchenson
+
+Mac-Address:-00:d0:b7:26:4a:74
+
+Timeline:-
+
+T0:-User Initates the HTTP request while searching for Google Authenticator
+
+T1: Redirected to fake Google Authenticator website
+
+T2: Malicious software downloaded from impersonated site
+
+T3: Malware executes and initiates outbound traffic
+
+T4: Command and Control (C2) communication observed
+
+T5: SOC Analyzes PCAP and confirms Malware infection
+
+INITIAL INFECTION VECTOR:
+
+
+
+domain: authenticatoor.org
+
+Protocol:HTTP
+
+
+Malicious-URL:- authenticatoor.org
+
+
+Domain:- authenticatoor.org
+
+POST INFECTION ACTIVITY:
+
+
+The infected host communicates with multiple command and control servers indicating successful malware execution and beaconing activity
+
+Tools used:- Wireshark- PCAP analysis, traffic correlation, object export
+
+Virustotal:- Malware Reputation and IOC correlation
